@@ -1,0 +1,3 @@
+# ไลบรารีนอกที่ฝั่ง pc ใช้ (core/ ไม่ใช้อะไรเพิ่ม)
+# ติดตั้ง: python -m pip install -r requirements.txt
+matplotlib    # analyze.py วาดกราฟ (ไม่มีก็รันได้ จะได้แค่รายงานตัวหนังสือ)

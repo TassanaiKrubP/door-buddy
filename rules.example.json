@@ -1,0 +1,24 @@
+{
+  "_note": "ข้อมูลของผู้ใช้ เพิ่ม/ลบผ่านแชท Telegram ได้ (โปรแกรมคัดลอกไฟล์นี้เป็น rules.json ให้ตอนรันครั้งแรก)",
+  "always": [],
+  "by_weekday": {
+    "mon": [],
+    "tue": [],
+    "wed": [],
+    "thu": [],
+    "fri": [],
+    "sat": [],
+    "sun": []
+  },
+  "by_subject": {},
+  "by_weather": {
+    "rain": [
+      "ร่ม"
+    ]
+  },
+  "by_date": {},
+  "appointments": {},
+  "no_alert_dates": [],
+  "weekly": [],
+  "weekly_skip": {}
+}

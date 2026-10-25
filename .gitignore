@@ -1,0 +1,28 @@
+# ข้อมูลลับ ห้ามขึ้น git
+secrets.json
+
+# ข้อมูลส่วนตัวของผู้ใช้ (นัด ของที่พก) · โปรแกรมสร้างจาก *.example.json ให้ตอนรันครั้งแรก
+rules.json
+activities.json
+
+# โน้ตส่วนตัว / เอกสารเตรียมนำเสนอ (ไม่ใช่โค้ด)
+CLAUDE.md
+lessons_learned.md
+.claude/
+video_script.md
+video_script.pdf
+video_script_print.html
+
+# ข้อมูลที่โปรแกรมสร้างเอง (events.csv, state.json, cache)
+data/
+
+# เฟิร์มแวร์ MicroPython (ไฟล์ใหญ่ โหลดใหม่จาก micropython.org ได้)
+*.bin
+
+# โค้ดที่แปลเป็น .mpy แล้ว (สร้างใหม่ได้ด้วย tools/upload_board.py)
+build/
+
+# ไฟล์ที่ Python สร้างเอง
+__pycache__/
+*.pyc
+.venv/

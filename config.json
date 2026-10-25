@@ -1,0 +1,16 @@
+{
+  "_note": "ค่าเริ่มตามสเปก · LAT/LON เป็นตัวอย่าง (กรุงเทพ) ให้แก้เป็นพิกัดหอ",
+  "OUT_DELAY": 10,
+  "COOLDOWN_MIN": 30,
+  "BEFORE_CLASS_MIN": 90,
+  "NO_CLASS_WINDOW": ["08:00", "11:00"],
+  "OUTSIDE_WINDOW": "none",
+  "RAIN_PROB": 50,
+  "RAIN_HOURS": 6,
+  "NIGHT_RESET": "03:00",
+  "LAT": 13.7563,
+  "LON": 100.5018,
+  "DEMO_MODE": false,
+  "OPEN_ALERT_SEC": 60,
+  "PREP_MIN": 60
+}

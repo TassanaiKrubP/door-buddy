@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><title>ภาพรวมระบบ</title>
+<style>
+  html, body { margin: 0; background: #fff; }
+  svg { display: block; font-family: "Leelawadee UI", "Tahoma", sans-serif; }
+  .t { font-size: 24px; fill: #111; text-anchor: middle; dominant-baseline: middle; }
+  .h { font-size: 27px; font-weight: bold; }
+  .s { font-size: 19px; fill: #333; }
+  .lab { font-size: 19px; fill: #2a78d6; font-weight: bold; text-anchor: middle; }
+  .box { fill: #e8f0fb; stroke: #2a78d6; stroke-width: 2.5; }
+  .pc  { fill: #d7f0dc; stroke: #2e7d32; stroke-width: 3; }
+  .ln { fill: none; stroke: #333; stroke-width: 3; }
+</style></head>
+<body>
+<svg width="1600" height="385" viewBox="0 0 1600 385" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect class="box" x="20" y="110" width="250" height="200" rx="12"/>
+  <text class="t h" x="145" y="160">เซนเซอร์ประตู</text>
+  <text class="t" x="145" y="200">MC-38</text>
+  <text class="t s" x="145" y="245">แม่เหล็ก 2 ชิ้น</text>
+  <text class="t s" x="145" y="275">ติด = ปิด · ห่าง = เปิด</text>
+
+  <path class="ln" d="M272,210 H338" marker-end="url(#a)"/>
+  <text class="lab" x="305" y="190">สาย</text>
+
+  <rect class="box" x="340" y="110" width="300" height="200" rx="12"/>
+  <text class="t h" x="490" y="160">ESP32</text>
+  <text class="t" x="490" y="200">MicroPython</text>
+  <text class="t s" x="490" y="245">อ่านประตู + กันสั่น</text>
+  <text class="t s" x="490" y="275">ส่ง เปิด/ปิด ทันที</text>
+
+  <path class="ln" d="M642,210 H758" marker-end="url(#a)"/>
+  <text class="lab" x="700" y="190">WiFi</text>
+
+  <rect class="pc" x="760" y="45" width="480" height="295" rx="12"/>
+  <text class="t h" x="1000" y="85">คอมพิวเตอร์ (Python)</text>
+  <text class="t s" x="1000" y="140">ตัดสินว่าออกจริงไหม (รอ 2 นาที)</text>
+  <text class="t s" x="1000" y="180">เลือกของตามวัน นัด กิจกรรมประจำสัปดาห์</text>
+  <text class="t s" x="1000" y="220">ดูโอกาสฝน (Open-Meteo)</text>
+  <text class="t s" x="1000" y="260">รับคำสั่งภาษาไทย + เมนูปุ่ม</text>
+  <text class="t s" x="1000" y="300">บันทึกทุกเหตุการณ์ → กราฟ</text>
+
+  <path class="ln" d="M1242,210 H1338" marker-end="url(#a)"/>
+  <text class="lab" x="1290" y="190">เน็ต</text>
+
+  <rect class="box" x="1340" y="110" width="240" height="200" rx="12"/>
+  <text class="t h" x="1460" y="160">Telegram</text>
+  <text class="t" x="1460" y="200">บนมือถือ</text>
+  <text class="t s" x="1460" y="245">เช็คลิสต์ / แจ้งเตือน</text>
+  <text class="t s" x="1460" y="275">สั่งงานด้วยแชท</text>
+</svg>
+</body></html>

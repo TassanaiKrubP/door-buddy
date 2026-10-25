@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8"><title>Flowchart ออกจริงไหม</title>
+<style>
+  html, body { margin: 0; background: #fff; }
+  svg { display: block; font-family: "Leelawadee UI", "Tahoma", sans-serif; }
+  .t { font-size: 21px; fill: #111; text-anchor: middle; dominant-baseline: middle; }
+  .b { font-weight: bold; }
+  .lab { font-size: 19px; fill: #111; font-weight: bold; }
+  .note { font-size: 16px; fill: #555; text-anchor: middle; }
+  .term { fill: #e6f4ea; stroke: #2e7d32; stroke-width: 2.5; }
+  .proc { fill: #e8f0fb; stroke: #2a78d6; stroke-width: 2.5; }
+  .dec  { fill: #fff4cc; stroke: #b38600; stroke-width: 2.5; }
+  .warn { fill: #fde8e1; stroke: #c4441a; stroke-width: 2.5; }
+  .send { fill: #d7f0dc; stroke: #2e7d32; stroke-width: 3; }
+  .ln { fill: none; stroke: #333; stroke-width: 2.5; }
+</style></head>
+<body>
+<svg width="920" height="1370" viewBox="0 0 920 1370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- เส้นกลับไป "อยู่ในห้อง" -->
+  <path class="ln" d="M300,1282 H60 V160 H300" marker-end="url(#a)"/>
+  <path class="ln" d="M310,290 H60"/>
+  <path class="ln" d="M850,560 H880 V160 H600" marker-end="url(#a)"/>
+  <path class="ln" d="M850,730 H880 V560"/>
+
+  <!-- แกนหลัก -->
+  <path class="ln" d="M450,90 V134" marker-end="url(#a)"/>
+  <path class="ln" d="M450,184 V228" marker-end="url(#a)"/>
+  <path class="ln" d="M450,350 V388" marker-end="url(#a)"/>
+  <path class="ln" d="M450,510 V564" marker-end="url(#a)"/>
+  <path class="ln" d="M450,614 V668" marker-end="url(#a)"/>
+  <path class="ln" d="M450,790 V844" marker-end="url(#a)"/>
+  <path class="ln" d="M450,894 V948" marker-end="url(#a)"/>
+  <path class="ln" d="M450,1070 V1124" marker-end="url(#a)"/>
+  <path class="ln" d="M450,1174 V1256" marker-end="url(#a)"/>
+
+  <!-- ทางแยก -->
+  <path class="ln" d="M590,450 H628" marker-end="url(#a)"/>
+  <path class="ln" d="M740,474 V534" marker-end="url(#a)"/>
+  <path class="ln" d="M590,730 H628" marker-end="url(#a)"/>
+  <path class="ln" d="M620,1010 H658" marker-end="url(#a)"/>
+  <path class="ln" d="M740,1034 V1282 H602" marker-end="url(#a)"/>
+
+  <!-- ป้าย ใช่ / ไม่ใช่ -->
+  <text class="lab" x="462" y="372">ใช่</text>
+  <text class="lab" x="462" y="540">ใช่</text>
+  <text class="lab" x="462" y="820">ไม่ใช่</text>
+  <text class="lab" x="462" y="1100">ใช่</text>
+  <text class="lab" x="236" y="280">ไม่ใช่ (รอ)</text>
+  <text class="lab" x="582" y="412">ไม่ใช่</text>
+  <text class="lab" x="596" y="700">ใช่</text>
+  <text class="lab" x="606" y="972">ไม่ใช่</text>
+
+  <!-- กล่อง -->
+  <ellipse class="term" cx="450" cy="60" rx="90" ry="30"/>
+  <text class="t b" x="450" y="61">เริ่ม</text>
+
+  <rect class="proc" x="300" y="136" width="300" height="48" rx="6"/>
+  <text class="t b" x="450" y="161">อยู่ในห้อง</text>
+
+  <polygon class="dec" points="450,230 590,290 450,350 310,290"/>
+  <text class="t" x="450" y="291">ประตูเปิด?</text>
+
+  <polygon class="dec" points="450,390 590,450 450,510 310,450"/>
+  <text class="t" x="450" y="438">ปิดประตู</text>
+  <text class="t" x="450" y="464">ภายใน 1 นาที?</text>
+
+  <rect class="warn" x="630" y="426" width="220" height="48" rx="6"/>
+  <text class="t" x="740" y="451">เตือน "ลืมปิดประตู"</text>
+
+  <rect class="proc" x="630" y="536" width="220" height="48" rx="6"/>
+  <text class="t" x="740" y="561">ปิดทีหลัง = อยู่ในห้อง</text>
+
+  <rect class="proc" x="300" y="566" width="300" height="48" rx="6"/>
+  <text class="t" x="450" y="591">ปิดประตู · เริ่มจับเวลา</text>
+
+  <polygon class="dec" points="450,670 590,730 450,790 310,730"/>
+  <text class="t" x="450" y="718">เปิดประตูอีก</text>
+  <text class="t" x="450" y="744">ภายใน 10 วินาที?</text>
+
+  <rect class="proc" x="630" y="706" width="220" height="48" rx="6"/>
+  <text class="t" x="740" y="731">ออกแป๊บเดียว ไม่เตือน</text>
+
+  <rect class="proc" x="300" y="846" width="300" height="48" rx="6"/>
+  <text class="t b" x="450" y="871">ออกจากห้องจริง</text>
+
+  <polygon class="dec" points="450,950 620,1010 450,1070 280,1010"/>
+  <text class="t" x="450" y="998">อยู่ในช่วงเตือน</text>
+  <text class="t" x="450" y="1024">และไม่ได้ปิดเตือน?</text>
+
+  <rect class="proc" x="660" y="986" width="160" height="48" rx="6"/>
+  <text class="t" x="740" y="1011">ไม่ส่ง</text>
+
+  <rect class="send" x="300" y="1126" width="300" height="48" rx="6"/>
+  <text class="t b" x="450" y="1151">ส่งเช็คลิสต์เข้า Telegram</text>
+
+  <rect class="proc" x="300" y="1258" width="300" height="48" rx="6"/>
+  <text class="t" x="450" y="1283">รอจนกลับเข้าห้อง</text>
+
+  <text class="note" x="460" y="1345">ช่วงเตือน = 90 นาทีก่อนนัด หรือก่อนกิจกรรมประจำสัปดาห์</text>
+</svg>
+</body></html>
